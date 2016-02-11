@@ -1,14 +1,40 @@
 <html>
   <head>
     <title>A Sprinkle of Glam Events | Contact Page</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/form.css">
   </head>
 
   <body>
     <!-- Embeddable Google Maps http://www.labnol.org/internet/embed-google-maps-background/28457/ -->
     <div id="googlemaps"></div>
     <div id="contactform">
+      <section id="contact">
 
+        <div class="container">
+
+          <form action="//formspree.io/sprinkleofglamevents@gmail.com" method="post">
+
+            <input type="name" name="name" placeholder="NAME" required>
+
+            <input  type="email" name="_replyto" placeholder="MAIL" required>
+
+            <input type="text" name="_subject" placeholder="SUBJECT" required>
+
+            <textarea name="message" placeholder="MESSAGE" required ></textarea>
+
+            <button type="submit" class="submit">SEND</button>
+
+            <input type="hidden" name="_next" value="/" />
+            <input type="text" name="_gotcha" style="display:none" />
+
+          </form>
+
+        </div>
+      </section>
     </div>
 
     <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
