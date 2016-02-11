@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <title>A Sprinkle of Glam Events | Contact Page</title>
+    <link rel="stylesheet" href="css/contact.css">
+  </head>
+
+  <body>
+    <!-- Embeddable Google Maps http://www.labnol.org/internet/embed-google-maps-background/28457/ -->
+    <div id="googlemaps"></div>
+    <div id="contactform">
+
+    </div>
+
+    <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+
+    <script type="text/javascript">
+
+    //  the latitude and longitude of your business / place
+    var position = [33.8839926, -84.5143761];
+
+    function showGoogleMaps() {
+
+      var latLng = new google.maps.LatLng(position[0], position[1]);
+
+      var mapOptions = {
+        zoom: 13, //initialize zoom level - max value 21
+        streetViewControl: false, //hide Street View pegman
+        scaleControl: true, // allow users to zoom the map
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        center: latLng,
+
+        styles: [{"stylers":[{"saturation":-100}]},{"featureType":"water","elementType":"geometry.fill","stylers":[{"color":"#0099dd"}]},{"elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"poi.park","elementType":"geometry.fill","stylers":[{"color":"#aadd55"}]},{"featureType":"road.highway","elementType":"labels","stylers":[{"visibility":"on"}]},{"featureType":"road.arterial","elementType":"labels.text","stylers":[{"visibility":"on"}]},{"featureType":"road.local","elementType":"labels.text","stylers":[{"visibility":"on"}]},{}]
+      };
+
+      map = new google.maps.Map(document.getElementById('googlemaps'),mapOptions);
+
+      // Show the default red marker at the location
+      marker = new google.maps.Marker({
+        position: latLng,
+        map: map,
+        draggable: false,
+        animation: google.maps.Animation.BOUNCE
+      });
+    }
+
+    google.maps.event.addDomListener(window, 'load', showGoogleMaps);
+    </script>
+
+  </body>
+</html>
