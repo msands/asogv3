@@ -1,3 +1,14 @@
+/* #contactform {
+  position: relative;
+  z-index:  1;
+  width: auto;
+  margin: 60px auto 0;
+  padding: 10px;
+  background: black;
+  height: auto;
+  opacity: .75;
+} */
+
 #contact {width:auto; height:auto; margin 0 auto; background:#000; }
 
 .container {width:960px; height:auto; margin: 0 auto; padding: 50px 0; }
