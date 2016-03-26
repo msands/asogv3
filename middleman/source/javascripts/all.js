@@ -2,7 +2,6 @@
 //= require main/jquery-ui.min
 //= require main/excanvas
 //= require plugins/revslider/jquery.themepunch.revolution.min
-//= require map
 //= require main/infobox.min
 //= require plugins/menu/superfish.min
 //= require plugins/menu/tinynav.min
@@ -15,5 +14,3 @@
 //= require plugins/countto/jquery.countTo
 //= require plugins/countdown/jquery.countdown
 //= require settings
-//= require custom
-//= require preloader
