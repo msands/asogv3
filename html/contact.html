@@ -1,77 +1,18 @@
-<html>
-  <head>
-    <title>A Sprinkle of Glam Events | Contact Page</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<form action="//formspree.io/sprinkleofglamevents@gmail.com" method="post">
 
-    <link rel="stylesheet" href="css/contact.css">
-    <link rel="stylesheet" href="css/form.css">
-  </head>
+  <input type="name" name="name" placeholder="NAME" required>
 
-  <body>
-    <!-- Embeddable Google Maps http://www.labnol.org/internet/embed-google-maps-background/28457/ -->
-    <div id="googlemaps"></div>
-    <div id="contactform">
-      <p><a href="index.html">Back to homepage</a></p>
-      <section id="contact">
+  <input  type="email" name="_replyto" placeholder="MAIL" required>
 
-        <div class="container">
+  <input type="text" name="_subject" placeholder="SUBJECT" required>
 
-          <form action="//formspree.io/sprinkleofglamevents@gmail.com" method="post">
+  <textarea name="message" placeholder="MESSAGE" required ></textarea>
 
-            <input type="name" name="name" placeholder="NAME" required>
+  <button type="submit" class="submit">SEND</button>
 
-            <input  type="email" name="_replyto" placeholder="MAIL" required>
+  <input type="hidden" name="_next" value="/" />
+  <input type="hidden" name="_subject" value="Sprinkle of Glam message"
+  <input type="text" name="_gotcha" style="display:none" />
 
-            <input type="text" name="_subject" placeholder="SUBJECT" required>
-
-            <textarea name="message" placeholder="MESSAGE" required ></textarea>
-
-            <button type="submit" class="submit">SEND</button>
-
-            <input type="hidden" name="_next" value="/" />
-            <input type="text" name="_gotcha" style="display:none" />
-
-          </form>
-
-        </div>
-      </section>
-    </div>
-
-    <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
-
-    <script type="text/javascript">
-
-    //  the latitude and longitude of your business / place
-    var position = [33.8839926, -84.5143761];
-
-    function showGoogleMaps() {
-
-      var latLng = new google.maps.LatLng(position[0], position[1]);
-
-      var mapOptions = {
-        zoom: 13, //initialize zoom level - max value 21
-        streetViewControl: false, //hide Street View pegman
-        scaleControl: true, // allow users to zoom the map
-        mapTypeId: google.maps.MapTypeId.ROADMAP,
-        center: latLng,
-
-        styles: [{"stylers":[{"saturation":-100}]},{"featureType":"water","elementType":"geometry.fill","stylers":[{"color":"#0099dd"}]},{"elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"poi.park","elementType":"geometry.fill","stylers":[{"color":"#aadd55"}]},{"featureType":"road.highway","elementType":"labels","stylers":[{"visibility":"on"}]},{"featureType":"road.arterial","elementType":"labels.text","stylers":[{"visibility":"on"}]},{"featureType":"road.local","elementType":"labels.text","stylers":[{"visibility":"on"}]},{}]
-      };
-
-      map = new google.maps.Map(document.getElementById('googlemaps'),mapOptions);
-
-      // Show the default red marker at the location
-      marker = new google.maps.Marker({
-        position: latLng,
-        map: map,
-        draggable: false,
-        animation: google.maps.Animation.BOUNCE
-      });
-    }
-
-    google.maps.event.addDomListener(window, 'load', showGoogleMaps);
-    </script>
-
-  </body>
-</html>
+</form>
